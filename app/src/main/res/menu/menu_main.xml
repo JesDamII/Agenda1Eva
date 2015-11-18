@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/action_settings"/>
+    <item android:id="@+id/itemalta" android:title="@string/Alta" android:actionLayout="@layout/dar_alta"></item>
+    <item android:id="@+id/itemacercade" android:title="@string/AcercaDe"></item><item android:id="@+id/itemsalir" android:title="@string/Salir" android:menuCategory="system"></item>
+
+</menu>
