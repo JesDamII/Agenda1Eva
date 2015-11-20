@@ -37,12 +37,12 @@ public class AdaptadorContactos extends BaseAdapter {
 	public View getView(int index, View convertView, ViewGroup parent) {
 		View item = convertView;
 		if(item == null){
-			LayoutInflater inflador = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			item = inflador.inflate(R.layout.item_contactos, null);
+			LayoutInflater infla = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			item = infla.inflate(R.layout.item_contactos, null);
 		}
 		
-		TextView tvNombre = (TextView) item.findViewById(R.id.tvItemCon1);
-		tvNombre.setText(contactos.get(index).getNombre());
+		TextView nom = (TextView) item.findViewById(R.id.tvItemCon1);
+		nom.setText(contactos.get(index).getNombre());
 		return item;
 	}
 

@@ -19,9 +19,9 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MostrarActividad extends Activity {
+public class actualizaContacto extends Activity {
 	private EditText et1,et2,et3,et4,et5,et6;
-	private ListView lv1;
+	private ListView listaTelefonos;
 	private int id,pvia;
 	private Spinner sp;
 	private String nombreNew,via,apellido,telefono,direccion,localidad,correo,telefonoOld="";
@@ -32,7 +32,7 @@ public class MostrarActividad extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.modificar);
-		lv1=(ListView)findViewById(R.id.lvTel);
+		listaTelefonos =(ListView)findViewById(R.id.lvTel);
 		et1 = (EditText) findViewById(R.id.etm1);
 		et2 = (EditText) findViewById(R.id.etm2);
 		et3 = (EditText) findViewById(R.id.etm3);
@@ -44,20 +44,19 @@ public class MostrarActividad extends Activity {
 		cargarTelefonos(id);
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,telefonos);
-		lv1.setAdapter(adapter);
-		lv1.setOnItemClickListener(new OnItemClickListener(){
+		listaTelefonos.setAdapter(adapter);
+		listaTelefonos.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
+									long arg3) {
 				et3.setText(telefonos.get(arg2));
-				telefonoOld=telefonos.get(arg2);
-				
+				telefonoOld = telefonos.get(arg2);
+
 			}
-			
-			
-        	
-        }); 
+
+
+		});
 		sp=(Spinner)findViewById(R.id.spm1);
 		ArrayAdapter<String>adapter2=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,vias);
 		sp.setAdapter(adapter2);
@@ -111,7 +110,7 @@ public class MostrarActividad extends Activity {
         cargarTelefonos(id);
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,telefonos);
-		lv1.setAdapter(adapter);
+		listaTelefonos.setAdapter(adapter);
 	}
 	public void addTele(){
 		DataBase admin=new DataBase(this, "administracion", null, 1);
@@ -242,7 +241,7 @@ public class MostrarActividad extends Activity {
 	        cargarTelefonos(id);
 			
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,telefonos);
-			lv1.setAdapter(adapter);
+			listaTelefonos.setAdapter(adapter);
 	 }
 	 public void cancelar() {
 	    	
