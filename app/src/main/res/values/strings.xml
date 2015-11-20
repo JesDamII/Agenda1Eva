@@ -36,5 +36,6 @@
     <string name="Avenida">Avenida</string>
     <string name="Plaza">Plaza</string>
     <string name="title_activity_alta">Alta</string>
+    <string name="baja">Baja</string>
 </resources>
 

@@ -31,10 +31,29 @@
         android:id="@+id/listViewContactos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/ib1">
+        android:layout_above="@+id/btExit">
     </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Alta"
+        android:id="@+id/btAlta"
+        android:onClick="Alta"
+        android:layout_below="@+id/listViewContactos"
+        android:layout_toLeftOf="@+id/btExit"
+        android:layout_toStartOf="@+id/btExit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Salir"
+        android:id="@+id/btExit"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/ib1"
+        android:layout_toStartOf="@+id/ib1"
+        android:onClick="exit" />
 
 </RelativeLayout>

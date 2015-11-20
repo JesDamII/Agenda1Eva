@@ -78,7 +78,7 @@ public class MostrarActividad extends Activity {
 	
 	private void cargarTelefonos(int id) {
 		String tele;
-    	AdminBD admin=new AdminBD(this, "administracion", null, 1);
+    	DataBase admin=new DataBase(this, "administracion", null, 1);
         SQLiteDatabase bd=admin.getWritableDatabase();
     	Cursor fila = bd.rawQuery("select telefono from telefonos where id="+id+" order by telefono", null);
     	if(fila.moveToFirst()){
@@ -94,7 +94,7 @@ public class MostrarActividad extends Activity {
 		
 	}
 	public void addTel(View view){
-		AdminBD admin=new AdminBD(this, "administracion", null, 1);
+		DataBase admin=new DataBase(this, "administracion", null, 1);
         SQLiteDatabase bd=admin.getWritableDatabase();
         telefono= et3.getText().toString();
         if(telefono.length()>0){
@@ -114,7 +114,7 @@ public class MostrarActividad extends Activity {
 		lv1.setAdapter(adapter);
 	}
 	public void addTele(){
-		AdminBD admin=new AdminBD(this, "administracion", null, 1);
+		DataBase admin=new DataBase(this, "administracion", null, 1);
         SQLiteDatabase bd=admin.getWritableDatabase();
         telefono= et3.getText().toString();
         ContentValues registro=new ContentValues();
@@ -131,7 +131,7 @@ public class MostrarActividad extends Activity {
 	public void modificar(View view){
 		Intent i=new Intent();	
 		if(et1.getText().length()>0){
-	        AdminBD admin=new AdminBD(this, "administracion", null, 1);
+	        DataBase admin=new DataBase(this, "administracion", null, 1);
 	        SQLiteDatabase bd=admin.getWritableDatabase();
 	    	nombreNew = et1.getText().toString();
 	    	apellido= et2.getText().toString();
@@ -196,7 +196,7 @@ public class MostrarActividad extends Activity {
 	 }
 	 public void aceptarCon(){
 			Intent i=new Intent();	
-			AdminBD admin=new AdminBD(this, "administracion", null, 1);
+			DataBase admin=new DataBase(this, "administracion", null, 1);
 	        SQLiteDatabase bd=admin.getWritableDatabase();
 	    	int cant = bd.delete("contactos", "id="+id, null);
 	    	bd.delete("telefonos", "id="+id, null);
@@ -230,7 +230,7 @@ public class MostrarActividad extends Activity {
 		 }
 	 }
 	 public void aceptarTel(){
-		 AdminBD admin=new AdminBD(this, "administracion", null, 1);
+		 DataBase admin=new DataBase(this, "administracion", null, 1);
 	        SQLiteDatabase bd=admin.getWritableDatabase();
 	        telefono= et3.getText().toString();
 	        int cant= bd.delete("telefonos", "telefono="+telefonoOld+" and id="+id, null);

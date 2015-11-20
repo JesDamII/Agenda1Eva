@@ -40,7 +40,7 @@ public class Alta extends AppCompatActivity {
         boolean salir=false;
         if(et1.getText().length()>0 && et3.getText().length()>0){
 
-            AdminBD admin=new AdminBD(this, "administracion", null, 1);
+            DataBase admin=new DataBase(this, "administracion", null, 1);
             SQLiteDatabase bd=admin.getWritableDatabase();
 
             nombre=et1.getText().toString();
@@ -85,7 +85,7 @@ public class Alta extends AppCompatActivity {
     }
 
     private void aniadirTel(int id, String telefono) {
-        AdminBD admin=new AdminBD(this, "administracion", null, 1);
+        DataBase admin=new DataBase(this, "administracion", null, 1);
         SQLiteDatabase bd=admin.getWritableDatabase();
         ContentValues registro=new ContentValues();
         registro.put("id",id );

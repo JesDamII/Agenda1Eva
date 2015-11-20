@@ -1,6 +1,5 @@
 package com.dam.jesus.agenda1eva;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,9 +10,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -22,25 +18,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-    private ArrayList<Contacto> contactos = new ArrayList<Contacto>();
+    private ArrayList<Contacto> contactos = new ArrayList<>();
     private ListView lvContacto;
     private int requestCode1=1;
     private EditText et1;
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.itemalta:
-                darAlta();
-                break;
-            case R.id.itemacercade:
-                Toast.makeText(this, "Realizado por Francisco Rodríguez Calleja", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.itemsalir:
-                finish();
 
-        }
-        return true;
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,10 +66,25 @@ public class MainActivity extends Activity {
         });
         et1=(EditText)findViewById(R.id.et1);
     }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.itemalta:
+                darAlta();
+                break;
+            case R.id.itemacercade:
+                Toast.makeText(this, "Realizado por Jesús Pinero Gómez", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.itemsalir:
+                System.exit(0);
+
+        }
+        return true;
+    }
+
     private void cargarPersonas(){
         String nombre,apellido,via,direccion,localidad,correo;
         int id;
-        AdminBD admin=new AdminBD(this, "administracion", null, 1);
+        DataBase admin=new DataBase(this, "administracion", null, 1);
         SQLiteDatabase bd=admin.getReadableDatabase();
         Cursor fila = bd.rawQuery("select * from contactos order by upper(nombre)", null);
         if(fila.moveToFirst()){
@@ -113,12 +111,12 @@ public class MainActivity extends Activity {
     }
     private void darAlta(){
         Intent i=new Intent(this,AltaContacto.class);
-        startActivityForResult(i,requestCode1);
+        startActivityForResult(i, requestCode1);
     }
     public void buscar(View view){
         String nombre,apellido,via,direccion,localidad,correo;
         int id;
-        AdminBD admin=new AdminBD(this, "administracion", null, 1);
+        DataBase admin=new DataBase(this, "administracion", null, 1);
         SQLiteDatabase bd=admin.getReadableDatabase();
         String nombreB=et1.getText().toString();
         if(nombreB.length()>0){
@@ -155,9 +153,6 @@ public class MainActivity extends Activity {
             });
             et1=(EditText)findViewById(R.id.et1);
         }
-
-
-
     }
 
     @Override
@@ -166,5 +161,11 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+    public void exit(View view){
+        System.exit(0);
+    }
+    public void Alta(View view){
+        Intent i=new Intent(this,AltaContacto.class);
+        startActivityForResult(i, requestCode1);
+    }
 }
