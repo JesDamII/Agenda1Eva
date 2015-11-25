@@ -1,14 +1,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="1"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:title="@string/action_settings"/>
     <item android:id="@+id/itemalta"
         android:orderInCategory="2"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:title="@string/Alta"
         android:actionLayout="@layout/dar_alta">
 
@@ -16,14 +17,14 @@
     <item android:id="@+id/itemacercade"
         android:title="@string/AcercaDe"
         android:orderInCategory="3"
-        android:showAsAction="never">
+        app:showAsAction="never">
 
     </item>
     <item android:id="@+id/itemsalir"
         android:title="@string/Salir"
         android:menuCategory="system"
         android:orderInCategory="4"
-        android:showAsAction="never"
+        app:showAsAction="never"
         >
 
     </item>

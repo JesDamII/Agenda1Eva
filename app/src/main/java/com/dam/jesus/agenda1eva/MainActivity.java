@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                lanzarActividad(arg2);
+                modificaActividad(arg2);
             }
 
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                lanzarActividad(arg2);
+                modificaActividad(arg2);
             }
 
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         bd.close();
     }
 
-    private void lanzarActividad(int index) {
+    private void modificaActividad(int index) {
         Intent i = new Intent(this,actualizaContacto.class);
         i.putExtra("contacto", contactos.get(index));
         startActivity(i);
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                         long arg3) {
-                    lanzarActividad(arg2);
+                    modificaActividad(arg2);
                 }
 
 
@@ -157,12 +157,5 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
-    public void exit(View view){
-        System.exit(0);
-    }
-    public void Alta(View view){
-        Intent i=new Intent(this,Alta.class);
-        startActivityForResult(i, requestCode1);
     }
 }
