@@ -23,9 +23,10 @@
         <TextView
             android:id="@+id/tvm1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:text="@string/Nombre" />
+            android:layout_height="match_parent"
+            android:layout_weight="0.34"
+            android:text="@string/Nombre"
+            android:gravity="bottom" />
 
         <EditText
             android:id="@+id/etm1"
@@ -42,9 +43,10 @@
         <TextView
             android:id="@+id/tvm2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/Apellidos" />
+            android:text="@string/Apellidos"
+            android:gravity="bottom" />
 
         <EditText
             android:id="@+id/etm2"
@@ -59,20 +61,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/tvm3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Telefono" />
+            android:layout_height="match_parent"
+            android:text="@string/Telefono"
+            android:gravity="bottom" />
 
         <EditText
             android:id="@+id/etm3"
-            android:layout_width="136dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2.36"
             android:ems="10"
             android:inputType="phone" />
 
@@ -98,9 +100,15 @@
         <ListView
             android:id="@+id/lvTel"
             android:layout_width="match_parent"
-            android:layout_height="12dp" >
+            android:layout_height="62dp" >
 
         </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
     </LinearLayout>
 
     <LinearLayout
@@ -110,21 +118,17 @@
         <TextView
             android:id="@+id/tvm4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingTop="10dp"
-            android:text="@string/Direccion" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+            android:text="@string/Direccion"
+            android:layout_weight="0.09"
+            android:gravity="bottom" />
 
         <Spinner
             android:id="@+id/spm1"
             android:layout_width="84dp"
             android:layout_height="36dp"
-            android:layout_weight="0.67" />
+            android:layout_weight="0.09" />
 
         <EditText
             android:id="@+id/etm4"
@@ -140,9 +144,10 @@
         <TextView
             android:id="@+id/tvm5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/Localidad" />
+            android:text="@string/Localidad"
+            android:gravity="bottom" />
 
         <EditText
             android:id="@+id/etm5"
@@ -161,14 +166,15 @@
         <TextView
             android:id="@+id/tvm6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="@string/CorreoE" />
+            android:text="@string/CorreoE"
+            android:gravity="bottom" />
 
         <EditText
             android:id="@+id/etm6"
             android:layout_width="233dp"
-            android:layout_height="wrap_content"
+            android:layout_height="28dp"
             android:ems="10" />
     </LinearLayout>
 

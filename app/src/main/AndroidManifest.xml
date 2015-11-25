@@ -20,6 +20,12 @@
             android:name=".Alta"
             android:label="@string/title_activity_alta" >
         </activity>
+        <activity
+            android:name=".actualizaContacto"
+            android:label="@string/updates">
+
+        </activity>
+
     </application>
 
 </manifest>
