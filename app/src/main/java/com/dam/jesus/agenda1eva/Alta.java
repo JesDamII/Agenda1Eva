@@ -68,16 +68,16 @@ public class Alta extends AppCompatActivity {
             aniadirTel(id,telefono);
             bd.close();
             if(cant>0){
-                Toast.makeText(this, R.string.ContIntro, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.contacOK, Toast.LENGTH_SHORT).show();
                 salir=true;
             }
             else{
-                Toast.makeText(this, getString(R.string.Error), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.error), Toast.LENGTH_LONG).show();
             }
 
         }
         else{
-            Toast.makeText(this, getString(R.string.Exnointroducido), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.delContac), Toast.LENGTH_LONG).show();
         }
         if(salir){
             setResult(RESULT_OK,i);

@@ -102,7 +102,7 @@ public class actualizaContacto extends Activity {
 	        registro.put("telefono",telefono );
 	        int cant = (int) bd.insert("telefonos", null, registro);
 	        if(cant==1){
-	        	Toast.makeText(this, getString(R.string.TelAni), Toast.LENGTH_LONG).show();
+	        	Toast.makeText(this, getString(R.string.addTel), Toast.LENGTH_LONG).show();
 	    	}
         }
         bd.close();
@@ -164,10 +164,10 @@ public class actualizaContacto extends Activity {
 			et5.setText("");
 			et6.setText("");
 	    	if(cant==1){
-	    		Toast.makeText(this, getString(R.string.ContMod), Toast.LENGTH_LONG).show();
+	    		Toast.makeText(this, getString(R.string.addtel), Toast.LENGTH_LONG).show();
 	    	}
 	    	else{
-	    		Toast.makeText(this, getString(R.string.Error), Toast.LENGTH_LONG).show();
+	    		Toast.makeText(this, getString(R.string.error), Toast.LENGTH_LONG).show();
 	    	}
     	}
 		setResult(RESULT_OK,i);
@@ -201,7 +201,7 @@ public class actualizaContacto extends Activity {
 	    	bd.delete("telefonos", "id="+id, null);
 	    	bd.close();
 	    	if(cant==1){
-	        	Toast.makeText(this, getString(R.string.ContBaj), Toast.LENGTH_LONG).show();
+	        	Toast.makeText(this, getString(R.string.baja_tel), Toast.LENGTH_LONG).show();
 	    	}
 	    	setResult(RESULT_OK,i);
 			finish();
@@ -234,7 +234,7 @@ public class actualizaContacto extends Activity {
 	        telefono= et3.getText().toString();
 	        int cant= bd.delete("telefonos", "telefono="+telefonoOld+" and id="+id, null);
 	        if(cant==1){
-	        	Toast.makeText(this, getString(R.string.TelBaj), Toast.LENGTH_LONG).show();
+	        	Toast.makeText(this, getString(R.string.baja_tel), Toast.LENGTH_LONG).show();
 	    	}
 	        bd.close();
 	        telefonos.clear();

@@ -26,7 +26,10 @@
             android:layout_height="match_parent"
             android:layout_weight="0.34"
             android:text="@string/Nombre"
-            android:gravity="bottom" />
+            android:gravity="bottom"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#5fa8f7" />
 
         <EditText
             android:id="@+id/etm1"
@@ -46,6 +49,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/Apellidos"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#5fa8f7"
             android:gravity="bottom" />
 
         <EditText
@@ -69,6 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/Telefono"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#5fa8f7"
             android:gravity="bottom" />
 
         <EditText
@@ -121,6 +130,9 @@
             android:layout_height="match_parent"
             android:paddingTop="10dp"
             android:text="@string/Direccion"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#5fa8f7"
             android:layout_weight="0.09"
             android:gravity="bottom" />
 
@@ -147,6 +159,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/Localidad"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#5fa8f7"
             android:gravity="bottom" />
 
         <EditText
@@ -168,7 +183,10 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="@string/CorreoE"
+            android:text="@string/mail"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#5fa8f7"
             android:gravity="bottom" />
 
         <EditText
@@ -187,7 +205,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:layout_weight="0.35"
+            android:background="#5fa8f7"
+            android:textColor="#ffffff"
+            android:layout_weight="0.26"
             android:onClick="modificar"
             android:text="@string/Modificar" />
 
@@ -196,8 +216,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.41"
+            android:background="#5fa8f7"
+            android:textColor="#ffffff"
             android:onClick="baja"
-            android:text="@string/Borrar" />
+            android:text="@string/borrar" />
 
     </LinearLayout>
 

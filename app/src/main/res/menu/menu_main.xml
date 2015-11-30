@@ -15,13 +15,13 @@
 
     </item>
     <item android:id="@+id/itemacercade"
-        android:title="@string/AcercaDe"
+        android:title="@string/acercade"
         android:orderInCategory="3"
         app:showAsAction="never">
 
     </item>
     <item android:id="@+id/itemsalir"
-        android:title="@string/Salir"
+        android:title="@string/Exit"
         android:menuCategory="system"
         android:orderInCategory="4"
         app:showAsAction="never"

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProyectoAgenda</string>
+    <string name="updates">update window</string>
+    <string name="action_settings">Settings</string>
+    <string name="hola_mundo">Hello world!</string>
+    <string name="Nombre">Name</string>
+    <string name="Apellidos">Surname</string>
+    <string name="Telefono">Telephone</string>
+    <string name="Localidad">Village</string>
+    <string name="Direccion">Direction</string>
+    <string name="Modificar">Modify</string>
+    <string name="Guardar">Store</string>
+    <string name="mail">Email</string>
+    <string name="Alta">Add</string>
+    <string name="acercade">About</string>
+    <string name="Exit">Exit</string>
+    <string name="info">Jesús Pinero Gomez. Agenda 26/11/2015</string>
+    <string name="Buscar">Search</string>
+    <string name="volver">Back</string>
+    <string name="addtel">Add phone</string>
+    <string name="noHayNombre">The name is not in the DB</string>
+    <string name="noDatosNom">Nothing has been added</string>
+    <string name="nomExixst">The name are in the DB </string>
+    <string name="contacOK">The contacto has been added correctly</string>
+    <string name="contacUpOK">Contact has been update correctly</string>
+    <string name="delContac">The Contact has been deleted</string>
+    <string name="borrar">Del</string>
+    <string name="error">Error</string>
+    <string name="addTel">Phone added</string>
+    <string name="Advertencia">Warning</string>
+    <string name="Eliminar">¿Do you want delete it?</string>
+    <string name="ok">Confirm</string>
+    <string name="Cancelar">Cancel</string>
+    <string name="baja_tel">Deleted phone</string>
+    <string name="calle">Street</string>
+    <string name="avenida">Avenue</string>
+    <string name="plaza">Square</string>
+    <string name="title_activity_alta">Add</string>
+    <string name="baja">Del</string>
+</resources>
